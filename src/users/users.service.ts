@@ -26,8 +26,7 @@ export class UsersService {
     let user = await this.userModel.create({
       email: createUserDto.email,
       password: hashedPassword,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      name: createUserDto.name,
     });
     return user;
   }
